@@ -1,0 +1,24 @@
+<?php
+if (isset($_POST['name'])){ 
+	$name = $_POST['name'];
+}
+else{ 
+	$name = "(No imput)";
+}
+echo <<<_END
+<html>
+<head>
+	<title>Form Test</title>
+</head>
+<body>
+	You name: $name<br>
+	<form method="post" action="formtest.php">
+		What is you name?
+		<input type="text" name="name">
+		<input type="submit">
+	</form>
+</body>
+</html>
+_END;
+
+?>
